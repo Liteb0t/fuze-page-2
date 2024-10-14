@@ -1,0 +1,60 @@
+{
+  "map": "load",
+  "spawn_location": {
+    "x_pos": 680,
+    "y_pos": 170
+  },
+  "entities": [
+    {
+      "name": "fishron",
+	  "count": 5,
+      "custom_properties": {
+        "x_pos": "random",
+        "y_pos": "random"
+      }
+    },
+	{
+      "name": "shark",
+	  "count": 5,
+      "custom_properties": {
+        "x_pos": "random",
+        "y_pos": "random"
+      }
+    },
+	{
+      "name": "impostor",
+	  "count": 1,
+      "custom_properties": {
+        "x_pos": 400,
+        "y_pos": 90
+      }
+    }
+  ],
+  "scale": {
+    "x_scale": 18,
+    "y_scale": 12
+  },
+  "spawners": [{
+	  "name": "fishron",
+	  "interval": 300,
+	  "args": {
+		"x_pos": "random",
+		"y_pos": "random"
+	  }
+  },
+  {
+	  "name": "shark",
+	  "interval": 600,
+	  "args": {
+		"x_pos": "random",
+		"y_pos": "random"
+	  }
+  }],
+  "objectives": [
+    {
+      "type": "eliminate",
+      "target": "impostor",
+      "is_completed": false
+    }
+  ]
+}

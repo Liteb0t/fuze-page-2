@@ -1,0 +1,12 @@
+{
+	"name": "sniper",
+	"speed": 100,
+	"cooldown": 30,
+	"delete_after": 30,
+	"properties": {
+	  "damage": 8,
+	  "health": 17,
+	  "resistance": 0.3,
+		"bounciness": 0
+	  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "default",
+  "display_name": "default",
+  "x_pos": -10,
+  "y_pos": -10,
+  "x_pile": 0,
+  "y_pile": 0,
+  "x_speed": 0,
+  "y_speed": 0,
+  "type": "enemy",
+  "team": "enemies",
+  "health": 120,
+  "damage": 1,
+  "direction": 90,
+  "is_bullet": false,
+  "lock_direction": false,
+  "cooldowns": [ "empty", "empty", "empty", "empty" ],
+  "show_nametag": true,
+  "minimap_character": "?",
+  "move_towards": true,
+  "weapons": [],
+  "wall_damage_range": 0,
+  "selectable_at_start": false,
+  "delete_after": -1,
+  "resistance": 1.5,
+  "bounciness": 0.5,
+  "use_ai": false,
+  "ai": {
+    "speed": 10,
+    "targets": []
+  },
+  "nametag": "default",
+  "skin": {
+    "stored": "within_sprite",
+    "data": "#####\n#####\n#####\n#####\n"
+  }
+}

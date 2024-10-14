@@ -1,0 +1,8 @@
+/weapons/rock.json
+/weapons/destroyer.json
+/weapons/sniper.json
+/weapons/mine.json
+/weapons/bubble.json
+/weapons/drill.json
+/weapons/sentry.json
+/weapons/laser.json

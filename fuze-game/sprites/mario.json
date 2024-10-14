@@ -1,0 +1,25 @@
+{
+  "name": "mario",
+  "x_pos": 100,
+  "y_pos": 100,
+  "health": 40,
+  "x_speed": -8,
+  "y_speed": -3,
+  "type": "enemy",
+  "team": "enemies",
+  "lock_direction": true,
+  "minimap_character": "M",
+  "use_ai": true,
+  "weapons": [ "rock" ],
+  "ai": {
+    "type": "goblin",
+    "speed": 25,
+    "targets": [ "player" ]
+  },
+  "show_nametag": true,
+  "skin": {
+
+    "stored": "txt_file",
+    "data": "mario"
+  }
+}

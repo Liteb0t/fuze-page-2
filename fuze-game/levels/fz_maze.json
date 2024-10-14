@@ -1,0 +1,57 @@
+{
+  "map": "load",
+  "spawn_location": {
+    "x_pos": 200,
+    "y_pos": 100
+  },
+  "entities": [
+    {
+      "name": "mario",
+	  "count": 5,
+      "custom_properties": {
+        "x_pos": 73,
+        "y_pos": 30,
+		"health": 40
+      }
+    },
+    {
+      "name": "sans",
+	  "count": 1,
+      "custom_properties": {
+        "x_pos": "random",
+        "y_pos": "random"
+      }
+    },
+    {
+      "name": "invader",
+	  "count": 5,
+      "custom_properties": {
+        "x_pos": "random",
+        "y_pos": "random"
+      }
+    },
+    {
+      "name": "impostor",
+	  "count": 1,
+      "custom_properties": {
+        "x_pos": 500,
+        "y_pos": 170
+      }
+    }
+  ],
+  "scale": {
+    "x_scale": 18,
+    "y_scale": 12
+  },
+  "objectives": [
+    {
+      "type": "eliminate",
+      "target": "mario",
+      "is_completed": false
+    },
+	{
+      "type": "eliminate",
+      "target": "impostor",
+      "is_completed": false
+    }
+  ]}

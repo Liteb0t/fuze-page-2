@@ -1,0 +1,25 @@
+{
+  "name": "fishron",
+  "x_pos": 200,
+  "y_pos": 200,
+  "x_speed": 0,
+  "y_speed": 0,
+  "health": 8,
+  "type": "enemy",
+  "team": "enemies",
+  "minimap_character": "f",
+  "use_ai": true,
+  "lock_direction": true,
+  "ai": {
+    "type": "goblin",
+    "speed": 20,
+    "targets": [ "player" ]
+  },
+  "skin": {
+
+    "stored": "txt_file",
+    "data": "fish"
+  },
+  "show_nametag": false,
+  "has_resistance": true
+}

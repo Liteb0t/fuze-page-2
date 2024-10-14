@@ -1,0 +1,25 @@
+{
+  "name": "shark",
+  "x_pos": 200,
+  "y_pos": 200,
+  "x_speed": 0,
+  "y_speed": 0,
+  "health": 40,
+  "damage": 3,
+  "type": "enemy",
+  "team": "enemies",
+  "minimap_character": "S",
+  "use_ai": true,
+  "weapons": [ "bubble" ],
+  "ai": {
+    "type": "goblin",
+    "speed": 25,
+    "targets": [ "player" ]
+  },
+  "lock_direction": false,
+  "skin": {
+    "stored": "txt_file",
+    "data": "shark"
+  },
+  "show_nametag": true
+}

@@ -1,0 +1,9 @@
+{ 
+"name": "bubble",
+"speed": 90, 
+"cooldown": 8, 
+"delete_after": 22,
+"properties": { 
+"damage": 12, 
+"health": 1}
+}
