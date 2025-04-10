@@ -19,8 +19,9 @@
 			<nav class="top-navigation-bar">
 	<a href="/">Home</a>
 	<a href="/software/">Software</a>
+	<a href="/software/fuzevd/">FuzeVD</a>
 	<a href="/fuze-game/">Fuze Game</a>
-	<a href="https://github.com/Liteb0t/">Github</a>
+	<!--<a href="https://github.com/Liteb0t/">Github</a>-->
 </nav>
 
 			<main>
@@ -28,7 +29,10 @@
 				<p>
 				Input a Youtube (and sometimes other sites!) <abbr title="You know what a URL is, right?">URL</abbr> and download into a format of your choice.<br>
 				<br>
-				Includes an updater, so you'll <dfn title="(lie)">never</dfn> need to reinstall to get the latest software. The only thing the updater can't update is itself...<br>
+				<details>
+					<summary>Includes <b>FuzeVD-updater</b> (click for more details)</summary>
+					Youtube sometimes pushes updates that break video downloaders, so if a download is not working then you should <b>check for updates</b>; a patch may have been rolled out. Fuze.page's repositories sometimes don't have the latest version of the underlying library, <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>, so an "external update yt-dlp" button was added which uses yt-dlp's built-in updater. Note that FuzeVD-updater will still show the last version that was downloaded from Fuze.page.<br>
+				</details>
 				<br>
 				<b>Download:</b>&nbsp;
 				<a href="/static/fuzevd/fuzevd-installer.msi">Windows installer</a><br>
@@ -46,7 +50,7 @@
 				This program was made in Visual Basic .NET. I might eventually rewrite FuzeVD using a different toolkit, most likely the <a href="https://www.qt.io/product/framework">QT framework</a>, since i found .NET 6 <dfn title="Didn't microsoft used to make good software? How the mighty have fallen.">too buggy to work with</dfn>. FuzeVD is on .NET Framework 4.7.2 which is good however staying on such an old framework for too long might lead to problems down the road.
 			</main>
 			<footer>
-	Oi mate, MIT loicense. <a href="https://github.com/Liteb0t/fuze-page-2">Source</a>? Website last updated 10th January 2025
+	Oi mate, MIT loicense. <a href="https://github.com/Liteb0t/fuze-page-2">Source</a>? Website last updated 21st January 2025
 </footer>
 
 		</div>
