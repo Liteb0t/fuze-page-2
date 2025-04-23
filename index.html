@@ -25,9 +25,21 @@
 </nav>
 
 			<main>
-				<span id="test-for-old-css"><b>Warning! </b>If you can see this text, your browser is too old to load some of the <abbr>CSS</abbr>.</span>
+				<span id="test-for-old-css" style="color: #F00;"><b>Warning! </b>If you can see this text, your browser is too old to load some of the <abbr>CSS</abbr>.</span>
 				<h2>News</h2>
+					<h3>Software proposal: Fuze Imageboard</h3>
+					<time datetime="2025-04-23">23<sup>rd</sup> April 2025</time>
+					<p>There exist a number of imageboard programs today including <a href="https://github.com/vichan-devel/vichan">Vichan</a>, <a href="https://gitgud.io/fatchan/jschan/">JSchan</a>, and Yotsuba. Each one is fraught with its own problems: Vichan is inefficient; JSchan is limited; Yotsuba, well, that's a long story.</p>
+					<p>The end goal is to write an imageboard that is:
+					<ol>
+						<li><b>Efficient</b>. The huge performance difference between Vichan and Yotsuba, despite the latter running an ancient version of PHP (as of the <a href="https://wiki.soyjak.st/Great_Cuckset">Great Cuckset</a>), indicates that efficiency varies wildly between imageboards and that there are greater gains to be made.</li>
+						<li><b>Minimalist</b>. Generally the more dependencies there are, the more vulnerable the software stack becomes to glitches, slowdowns, and security holes. This is especially the case when the stack is not constantly maintained and kept up to date. Features get added and deprecated over time whilst some software gets abandoned entirely, making proper maintenance headache-inducing. Better to avoid unnecessary dependencies which are not already mature and well-established. This rule should not override rule 1.</li>
+						<li><b>Modern</b>. Since the early days of the internet, there have been many advances in web technologies. One such advancement is websockets. In classic imageboards the client either needs to refresh to check for new posts in a thread, or turn on an auto-update which sends requests to the server with an interval; this is wasteful and archaic. With websockets, the server can send an update to connected clients the moment a post is received. This rule should not override rules 1 and 2.</li>
+					</ol>
+					This proposal may or may not be implemented, in part or in full.
+					</p>
 				<h3><a href="https://fuze.page/software/fuzevd">FuzeVD</a> 2.1.0 released</h3>
+					<time datetime="2025-01-10">10<sup>th</sup> January 2025</time>
 				<p>This release contains major bug fixes and a few additions.<br>
 				The previously selected format and quality will now load on application startup.<br>
 				Removed "notify on download complete" and added options to split the download into chapters, include the video ID (which is now excluded by default), and to disable AV1 encoding.</p>
@@ -38,10 +50,10 @@
 				<h3>Fuze Game</h3>
 				<p>The flagship Fuze software - a two-dimensional shooting game with simple graphics.</p>
 				<h3>Github</h3>
-				<p>My Github page. Contains some things not on this website.</p>
+				<p>My Github page. Contains some software not on this website. FuzeVD is not on Github (yet).</p>
 			</main>
 			<footer>
-	Oi mate, MIT loicense. <a href="https://github.com/Liteb0t/fuze-page-2">Source</a>? Website last updated 21st January 2025
+	Oi mate, MIT loicense. <a href="https://github.com/Liteb0t/fuze-page-2">Source</a>? Website last updated <time datetime="2025-04-23">23<sup>rd</sup> April 2025.</time>
 </footer>
 
 		</div>
