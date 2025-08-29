@@ -7,6 +7,20 @@ html {
 	#test-for-old-css {
 		display: none;
 	}
+
+	#footer-art {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		width: 100%;
+		z-index: -10;
+	}
+}
+
+#test-for-old-css {
+	color: #F00;
 }
 
 body {
@@ -29,11 +43,27 @@ header {
 	display: flex;
 	height: 73px;
 
-	#spacer {
+	.HeaderSpacer {
+		position: relative;
+		color: #FFF;
 		flex-grow: 1;
-		background-image: url("/static/fuze-page-tile-white.png");
-		background-size: contain;
-		opacity: 0.5;
+		.HeaderContent {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			text-shadow: 0.1em 0.1em 0.2em #000;
+		}
+		.HeaderBackground {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("/static/fuze-page-tile-white.png");
+			background-size: contain;
+			opacity: 0.5;
+		}
 	}
 }
 
@@ -72,16 +102,6 @@ main {
 footer {
 	background-color: #ccc;
 	padding: 8px;
-}
-
-#footer-art {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	margin: 0 auto;
-	width: 100%;
-	z-index: -10;
 }
 
 /* FUZE TABLES */
