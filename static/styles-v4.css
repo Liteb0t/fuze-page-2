@@ -42,7 +42,9 @@ header {
 	background: linear-gradient(#000, #000, #666);
 	display: flex;
 	height: 73px;
-
+	#logo {
+		image-rendering: pixelated;
+	}
 	.HeaderSpacer {
 		position: relative;
 		color: #FFF;
@@ -50,9 +52,10 @@ header {
 		.HeaderContent {
 			position: absolute;
 			top: 0;
-			left: 0;
+			right: 0;
 			z-index: 1;
-			text-shadow: 0.1em 0.1em 0.2em #000;
+			font-family: 'Tahoma', sans-serif;
+			text-shadow: -0.1em 0.1em 0.2em #000;
 		}
 		.HeaderBackground {
 			position: absolute;
