@@ -4,8 +4,10 @@
 	<head>
 		<title>FuzeVD</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/static/styles-v4.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/styles-v4.css">
+<script src="/static/script.js"></script>
+
 	</head>
 	<body>
 		<div id="main-page">
@@ -18,12 +20,13 @@
 			<i>Serving the interwebz since <time>2020</time></i><br>
 			<span id="test-for-old-css"><b>Warning! </b>If you can see this text, your browser is too old to load some of the <abbr>CSS</abbr> styles.</span>
 		</div>
+		<button id="dark_mode_switch">Switch to dark mode</button>
 		<div class="HeaderBackground"></div>
 	</div>
 </header>
 
 			<nav class="top-navigation-bar">
-	<a href="/">Home</a>
+	<a href="/">News</a>
 	<a href="/software/">Software</a>
 	<a href="/software/fuzevd/">FuzeVD</a>
 	<a href="/fuze-game/">Fuze Game</a>
@@ -31,12 +34,13 @@
 </nav>
 
 			<main>
-				<h2>FuzeVD - Video Downloader</h2>
+				<h2>FuzeVD - Video Downloader <sup>[<a href="https://github.com/Liteb0t/FuzeVD/">GitHub</a>]</sup></h2>
 				<p>
-				<b>Download:</b>&nbsp;<a href="/static/fuzevd/fuzevd-installer.msi">Windows installer (64 bit)</a> - Windows 8 or newer required, as well as <a href="https://www.python.org/downloads/">Python</a>.<br><br>
-				FuzeVD 2.1.1 <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/v2.1.1">Github</a>]</sup> was released on the <time datetime="2025-09-03">3<sup>rd</sup> of September, 2025</time>.<br><br>
+				<b>Download:</b>&nbsp;<a href="/static/fuzevd/fuzevd-installer.msi">Windows installer (64 bit)</a> - Windows 8 or newer is required, as well as <a href="https://www.python.org/downloads/">Python</a>.<br><br>
+				FuzeVD 2.1.1 <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/v2.1.1">GitHub</a>]</sup> was released on the <time datetime="2025-09-03">3<sup>rd</sup> of September, 2025</time>.<br><br>
 				Input a <abbr title="You know what a URL is, right?">URL</abbr> and download into a format of your choice. Supports Youtube and also works with many other sites <sup>[<a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md">Supported sites</a>]</sup>.
 				</p>
+				<h3>Gallery</h3>
 				<div class="ImageGallery">
 				<figure>
 					<img src="/static/FuzeVD 2.1.0 Capture.png" alt="A screenshot of FuzeVD version 2.1.0" width="386" height="471"/>
@@ -63,7 +67,8 @@
 					This program was made in Visual Basic .NET. I might eventually rewrite FuzeVD using a different toolkit, most likely the <a href="https://www.qt.io/product/framework">QT framework</a>, since i found .NET 6 <dfn title="Didn't microsoft used to make good software? How the mighty have fallen.">too buggy to work with</dfn>. FuzeVD is on .NET Framework 4.7.2 which is good however staying on such an old framework for too long might lead to problems down the road.
 				</p>
 			</main>
-			<footer>
+			<img src="/static/flashlight.webp" id="flashlight" style="aspect-ratio: 250 / 250; left: 380px; top: -176px;" width="250" height="250">
+<footer>
 	Oi mate, MIT loicense. <a href="https://github.com/Liteb0t/fuze-page-2">Source</a>? Website last updated <time datetime="2025-09-03">3<sup>rd</sup> September 2025</time>
 </footer>
 

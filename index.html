@@ -4,8 +4,10 @@
 	<head>
 		<title>Fuze Page</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/static/styles-v4.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/styles-v4.css">
+<script src="/static/script.js"></script>
+
 	</head>
 	<body>
 		<div id="main-page">
@@ -18,12 +20,13 @@
 			<i>Serving the interwebz since <time>2020</time></i><br>
 			<span id="test-for-old-css"><b>Warning! </b>If you can see this text, your browser is too old to load some of the <abbr>CSS</abbr> styles.</span>
 		</div>
+		<button id="dark_mode_switch">Switch to dark mode</button>
 		<div class="HeaderBackground"></div>
 	</div>
 </header>
 
 			<nav class="top-navigation-bar">
-	<a href="/">Home</a>
+	<a href="/">News</a>
 	<a href="/software/">Software</a>
 	<a href="/software/fuzevd/">FuzeVD</a>
 	<a href="/fuze-game/">Fuze Game</a>
@@ -31,16 +34,16 @@
 </nav>
 
 			<main>
-				<h2>News</h2>
+				<h1>News</h1>
 					<article>
-						<h3>FuzeVD is now open source</h3>
-						<time datetime="2025-09-03">3<sup>rd</sup> September 2025</time>
+						<time datetime="2025-09-03" style="float: right">3<sup>rd</sup> September 2025</time>
+						<h2>FuzeVD is now open source</h2>
 						<p>View the source code on the <a href="https://github.com/Liteb0t/FuzeVD">Github repository</a>. Please note that the <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> and <a href="https://ffmpeg.org/">ffmpeg</a> EXE files are not bundled in the source code - you will need to add them to the "Video Downloader" folder yourself.<br><br>
 						FuzeVD also received a minor update <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/v2.1.1">2.1.1 release notes</a>]</sup>.</p>
 					</article>
 					<article>
-					<h3>Fuze Mediaboard debut</h3>
-					<time datetime="2025-08-29">29<sup>th</sup> August 2025</time>
+					<time datetime="2025-08-29" style="float: right">29<sup>th</sup> August 2025</time>
+					<h2>Fuze Mediaboard debut</h2>
 					<p>
 					<a href="/software/mediaboard/">Fuze Mediaboard</a> version 0.0.0 has been released, succeeding <a href="/fuze-game/">Fuze Game</a> as the flagship Fuze.page software. This is a messageboard that can be deployed on a web server to host a community.
 					</p>
@@ -49,8 +52,8 @@
 					</p>
 					</article>
 					<article>
-					<h3>Software proposal: Fuze Imageboard</h3>
-					<time datetime="2025-04-23">23<sup>rd</sup> April 2025</time>
+					<time datetime="2025-04-23" style="float: right">23<sup>rd</sup> April 2025</time>
+					<h2>Software proposal: Fuze Imageboard</h2>
 					<p>There exist a number of imageboard programs today including <a href="https://github.com/vichan-devel/vichan">Vichan</a>, <a href="https://gitgud.io/fatchan/jschan/">JSchan</a>, and Yotsuba. Each one is fraught with its own problems: Vichan is inefficient; JSchan is limited; Yotsuba, well, that's a long story.</p>
 					<p>The end goal is to write an imageboard that is:
 					<ol>
@@ -62,14 +65,15 @@
 					</p>
 					</article>
 					<article>
-				<h3><a href="https://fuze.page/software/fuzevd">FuzeVD</a> 2.1.0 released</h3>
-					<time datetime="2025-01-10">10<sup>th</sup> January 2025</time>
+					<time datetime="2025-01-10" style="float: right">10<sup>th</sup> January 2025</time>
+				<h2><a href="https://fuze.page/software/fuzevd">FuzeVD</a> 2.1.0 released</h2>
 				<p>This release contains major bug fixes and a few additions.<br>
 				The previously selected format and quality will now load on application startup.<br>
 				Removed "notify on download complete" and added options to split the download into chapters, include the video ID (which is now excluded by default), and to disable AV1 encoding.</p>
 					</article>
 			</main>
-			<footer>
+			<img src="/static/flashlight.webp" id="flashlight" style="aspect-ratio: 250 / 250; left: 380px; top: -176px;" width="250" height="250">
+<footer>
 	Oi mate, MIT loicense. <a href="https://github.com/Liteb0t/fuze-page-2">Source</a>? Website last updated <time datetime="2025-09-03">3<sup>rd</sup> September 2025</time>
 </footer>
 
