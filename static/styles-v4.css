@@ -19,6 +19,10 @@ html {
 	}
 }
 
+.ImageGallery {
+	margin: -1em;
+}
+
 #test-for-old-css {
 	color: #F00;
 }
@@ -112,13 +116,16 @@ main {
 		max-width: 100%;
 	}
 
-	/*
-	article:not(:last-child) {
-		border-bottom: 2px groove #555;
-	}*/
-
 	h2 {
 		border-top: 1px solid #AAA;
+	}
+	article {
+		&::after {
+			content: " ";
+			display: block;
+			height: 0;
+			clear: both;
+		}
 	}
 }
 
@@ -129,93 +136,4 @@ footer {
 
 button {
 	border-radius: 0;
-}
-
-/* FUZE TABLES */
-
-.fuze-table {
-	border: 2px solid #000;
-	box-sizing: border-box;
-	/* height: 100%; */
-	/* overflow-y: scroll; */
-
-
-	.table-title-and-navigation-container {
-		background-color: #cdf;
-		display: flex;
-		padding: 2px;
-		border-bottom: 2px solid #246;
-		z-index: 99;
-	}
-	
-	.table-title {
-	    flex: 1 0 auto;
-	}
-	
-	.showing-indexes {
-	    /* blah */
-	}
-	
-	.page-button:hover {
-	    background-color: #ec9;
-	}
-	
-	.table-container {
-		overflow-x: auto;
-		max-height: 350px;
-		padding: 0 2px 0 2px;
-		/*! overflow-y: clip; */
-		/*! max-height: 95%; */
-	}
-	
-	table {
-		border-collapse: collapse;
-		/*! position: relative; */
-		text-align: left;
-
-		td {
-			border: 2px solid #cde;
-			padding: 4px 8px 4px 8px;
-		}
-		
-		thead th {
-			background: #f2f9ff;
-			position: sticky;
-			padding: 4px;
-			border-bottom: 2px solid blue;
-		}
-		tbody {
-			tr:nth-child(odd) {
-			    background-color: #f2f2f2;
-			}
-			
-			tr:hover {
-				background-color: #dde;
-				cursor: pointer;
-			}
-		}
-	}
-	
-	.column-buttons {
-		float: right;
-		/*! width: 1em; */
-		text-align: center;
-		/*! cursor: pointer; */
-		/*! bottom: 0; */
-		/*! display: block; */
-		/*! position: absolute; */
-		/*! width: -moz-available; */
-		/* right: 0; */
-		/* top: 0; */
-
-		span {
-		    cursor: pointer;
-		    display: inline-block;
-		    width: 1.5em;
-		}
-		
-		span:hover {
-		    background-color: #cdf;
-		}
-	}
 }
