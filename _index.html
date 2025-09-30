@@ -5,51 +5,56 @@
 		{{html_head.html}}
 	</head>
 	<body>
-		<div id="main-page">
-			{{header.html}}
-			{{navbar.html}}
-			<main>
-				<h1>News</h1>
-					<article>
-						<time datetime="2025-09-03" style="float: right">3<sup>rd</sup> September 2025</time>
-						<h2>FuzeVD is now open source</h2>
-						<p>View the source code on the <a href="https://github.com/Liteb0t/FuzeVD">Github repository</a>. Please note that the <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> and <a href="https://ffmpeg.org/">ffmpeg</a> EXE files are not bundled in the source code - you will need to add them to the "Video Downloader" folder yourself.<br><br>
-						FuzeVD also received a minor update <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/v2.1.1">2.1.1 release notes</a>]</sup>.</p>
-					</article>
-					<article>
-					<time datetime="2025-08-29" style="float: right">29<sup>th</sup> August 2025</time>
-					<h2>Fuze Mediaboard debut</h2>
-					<p>
-					<a href="/software/mediaboard/">Fuze Mediaboard</a> version 0.0.0 has been released, succeeding <a href="/fuze-game/">Fuze Game</a> as the flagship Fuze.page software. This is a messageboard that can be deployed on a web server to host a community.
-					</p>
-					<h4>Deploy at your own risk.</h4>
-					<p>This software should not be considered stable or secure until the 0.1.0 release. It will be deemed "complete" at the 1.0.0 release, at which point it will be ready to be deployed at scale and compete against established messageboards such as <a href="https://vichan.info">Vichan</a>. Many important features - not least moderation tools - are yet to be added.
-					</p>
-					</article>
-					<article>
-					<time datetime="2025-04-23" style="float: right">23<sup>rd</sup> April 2025</time>
-					<h2>Software proposal: Fuze Imageboard</h2>
-					<p>There exist a number of imageboard programs today including <a href="https://github.com/vichan-devel/vichan">Vichan</a>, <a href="https://gitgud.io/fatchan/jschan/">JSchan</a>, and Yotsuba. Each one is fraught with its own problems: Vichan is inefficient; JSchan is limited; Yotsuba, well, that's a long story.</p>
-					<p>The end goal is to write an imageboard that is:
-					<ol>
-						<li><b>Efficient</b>. The fact that Yotsuba runs so much more efficiently than Vichan, despite the former running an ancient version of PHP (as of the <a href="https://wiki.soyjak.st/Great_Cuckset">Great Cuckset</a>), indicates that efficiency varies wildly between imageboards and that there are greater gains to be made.</li>
-						<li><b>Minimalist</b>. Generally the more dependencies there are, the more vulnerable the software stack becomes to glitches, slowdowns, and security holes. This is especially the case when the stack is not constantly maintained and kept up to date. Features get added and deprecated over time whilst some software gets abandoned entirely, making proper maintenance headache-inducing - Better to avoid unnecessary dependencies which are not already mature and well-established. This rule should not override rule 1.</li>
-						<li><b>Modern</b>. Since the early days of the internet, there have been many advances in web technologies. One such advancement is websockets. In classic imageboards the client either needs to refresh to check for new posts in a thread, or turn on an auto-update which sends requests to the server with an interval; this is wasteful and archaic. With websockets, the server can send an update to connected clients the moment a post is received. This rule should not override rules 1 and 2.</li>
-					</ol>
-					This proposal may or may not be implemented, in part or in full.
-					</p>
-					</article>
-					<article>
-					<time datetime="2025-01-10" style="float: right">10<sup>th</sup> January 2025</time>
-				<h2><a href="https://fuze.page/software/fuzevd">FuzeVD</a> 2.1.0 released</h2>
-				<p>This release contains major bug fixes and a few additions.<br>
-				The previously selected format and quality will now load on application startup.<br>
-				Removed "notify on download complete" and added options to split the download into chapters, include the video ID (which is now excluded by default), and to disable AV1 encoding.</p>
-					</article>
-			</main>
-			{{footer.html}}
-		</div>
-		{{footer-art.html}}
+		{{header.html}}
+		{{navbar.html}}
+		<main>
+			<h1>News</h1>
+			<article>
+				<time datetime="2025-09-30" style="float: right">30<sup>th</sup> September 2025</time>
+				<h2>100% human</h2>
+				<figure style="float: right">
+					<img src="/static/No_AI_sign.png" alt="No AI" width="102" height="102"></figure>
+				<p>No AI is used to create any Fuze.page software or media.<br><br>
+				Open-source contributions found to have been AI-generated/assisted will be rejected.</p>
+			</article>
+			<article>
+				<time datetime="2025-09-03" style="float: right">3<sup>rd</sup> September 2025</time>
+				<h2>FuzeVD is now open source</h2>
+				<p>View the source code on the <a href="https://github.com/Liteb0t/FuzeVD">Github repository</a>. Please note that the <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> and <a href="https://ffmpeg.org/">ffmpeg</a> EXE files are not bundled in the source code - you will need to add them to the "Video Downloader" folder yourself.<br><br>
+				FuzeVD also received a minor update <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/v2.1.1">2.1.1 release notes</a>]</sup>.</p>
+			</article>
+			<article>
+			<time datetime="2025-08-29" style="float: right">29<sup>th</sup> August 2025</time>
+			<h2>Fuze Mediaboard debut</h2>
+			<p>
+			<a href="/software/mediaboard/">Fuze Mediaboard</a> version 0.0.0 has been released, succeeding <a href="/fuze-game/">Fuze Game</a> as the flagship Fuze.page software. This is a messageboard that can be deployed on a web server to host a community.
+			</p>
+			<h4>Deploy at your own risk.</h4>
+			<p>This software should not be considered stable or secure until the 0.1.0 release. It will be deemed "complete" at the 1.0.0 release, at which point it will be ready to be deployed at scale and compete against established messageboards such as <a href="https://vichan.info">Vichan</a>. Many important features - not least moderation tools - are yet to be added.
+			</p>
+			</article>
+			<article>
+			<time datetime="2025-04-23" style="float: right">23<sup>rd</sup> April 2025</time>
+			<h2>Software proposal: Fuze Imageboard</h2>
+			<p>There exist a number of imageboard programs today including <a href="https://github.com/vichan-devel/vichan">Vichan</a>, <a href="https://gitgud.io/fatchan/jschan/">JSchan</a>, and Yotsuba. Each one is fraught with its own problems: Vichan is inefficient; JSchan is limited; Yotsuba, well, that's a long story.</p>
+			<p>The end goal is to write an imageboard that is:
+			<ol>
+				<li><b>Efficient</b>. The fact that Yotsuba runs so much more efficiently than Vichan, despite the former running an ancient version of PHP (as of the <a href="https://wiki.soyjak.st/Great_Cuckset">Great Cuckset</a>), indicates that efficiency varies wildly between imageboards and that there are greater gains to be made.</li>
+				<li><b>Minimalist</b>. Generally the more dependencies there are, the more vulnerable the software stack becomes to glitches, slowdowns, and security holes. This is especially the case when the stack is not constantly maintained and kept up to date. Features get added and deprecated over time whilst some software gets abandoned entirely, making proper maintenance headache-inducing - Better to avoid unnecessary dependencies which are not already mature and well-established. This rule should not override rule 1.</li>
+				<li><b>Modern</b>. Since the early days of the internet, there have been many advances in web technologies. One such advancement is websockets. In classic imageboards the client either needs to refresh to check for new posts in a thread, or turn on an auto-update which sends requests to the server with an interval; this is wasteful and archaic. With websockets, the server can send an update to connected clients the moment a post is received. This rule should not override rules 1 and 2.</li>
+			</ol>
+			This proposal may or may not be implemented, in part or in full.
+			</p>
+			</article>
+			<article>
+			<time datetime="2025-01-10" style="float: right">10<sup>th</sup> January 2025</time>
+			<h2><a href="https://fuze.page/software/fuzevd">FuzeVD</a> 2.1.0 released</h2>
+			<p>This release contains major bug fixes and a few additions.<br>
+			The previously selected format and quality will now load on application startup.<br>
+			Removed "notify on download complete" and added options to split the download into chapters, include the video ID (which is now excluded by default), and to disable AV1 encoding.</p>
+			</article>
+		</main>
+		{{footer.html}}
 	</body>
 </html>
 

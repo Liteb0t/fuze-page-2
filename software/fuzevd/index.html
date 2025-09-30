@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
-		<title>FuzeVD - Video Downloader</title>
-		<meta name="description">FuzeVD can download Youtube videos into a variety of formats. This is a high-quality open-source utility which runs on Windows and has been maintained since 2021. It can also update automatically.</meta>
+		<title>Fuze.page - FuzeVD</title>
+		<meta name="description" content="Open-source video downloader. Download Youtube to mp4, mp3, and other formats. Wrapper for yt-dlp.">
 		<meta name="keywords" content="yt-dlp,download,Windows,Youtube,video,audio,youtube-dl,gui">
 		<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +12,7 @@
 
 	</head>
 	<body>
-		<div id="main-page">
-			<header>
+		<header>
 	<a href="/" id="logo">
 		<img src="/static/fuze-min.png" height="73" alt="Fuze.page logo">
 	</a>
@@ -27,7 +26,7 @@
 	</div>
 </header>
 
-			<nav class="top-navigation-bar">
+		<nav class="top-navigation-bar">
 	<a href="/">News</a>
 	<a href="/software/">Software</a>
 	<a href="/software/fuzevd/">FuzeVD</a>
@@ -35,50 +34,48 @@
 	<!--<a href="https://github.com/Liteb0t/">Github</a>-->
 </nav>
 
-			<main>
-				<h1>FuzeVD - Video Downloader</h1>
-				<p>
-					<span style="color: #C11; font-weight: bold;">"403 Forbidden" error? Be sure to update FuzeVD to version 2.1.2; Youtube released an update which broke yt-dlp.</span><br>
-				<b>Download:</b>&nbsp;<a href="/static/fuzevd/fuzevd-installer.msi">Windows installer (64 bit)</a> - Windows 8 or newer is required, as well as <a href="https://www.python.org/downloads/">Python</a>.<br><br>
-				FuzeVD 2.1.2 <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/v2.1.2">GitHub</a>]</sup> was released on <time datetime="2025-09-26">26<sup>th</sup> of September, 2025</time>.<br><br>
-				Paste a <abbr title="You know what a URL is, right?">URL</abbr> and download into a video or audio format of your choice. Supports Youtube and many other websites <sup>[<a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md">Supported sites</a>]</sup>. <br><br>
-				FuzeVD uses the libraries <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> and <a href="https://ffmpeg.org/">ffmpeg</a>. This is just a <abbr>GUI</abbr> wrapper for yt-dlp so for complex operations you can use the included exe, but you will need to learn some commands.
-				</p>
-				<h2>Gallery</h2>
-				<div class="ImageGallery">
-				<figure>
-					<img src="/static/FuzeVD 2.1.0 Capture.png" alt="A screenshot of FuzeVD version 2.1.0" width="386" height="471"/>
-					<figcaption>Here is what FuzeVD looks like on Windows 10&#8482;</figcaption>
-				</figure>
-				<figure>
-					<img src="/static/fuzevd_2-0_capture1.png" alt="A screenshot of FuzeVD version 2.0" width="400" height="473"/>
-					<figcaption>An older version of FuzeVD on Windows 7&#8482;</figcaption>
-				</figure>
-				<figure>
-					<img src="/static/FuzeVD Updater capture.png" alt="A screenshot of FuzeVD Updater" width="306" height="239"/>
-					<figcaption>FuzeVD updater window</figcaption>
-				</figure>
-				</div>
-				<h2>FuzeVD-Updater</h2>
-				<p>
-					If newer versions are available, FuzeVD Updater can install them automatically. Click on the "Check For Updates" button to open the updater.<br>
-					Youtube sometimes pushes updates that break video downloaders, so if a download is not working you should <b>check for updates</b>; a patch may have been rolled out.
-					Fuze.page's repositories sometimes don't have the latest version of the underlying library, <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>, so an "external update yt-dlp" button was added which uses yt-dlp's built-in updater. 
-					Note that FuzeVD-updater will still show the last version that was downloaded from Fuze.page.
-				</p>
-				<h2>The future of FuzeVD</h2>
-				<p>
-					FuzeVD may be rewritten soon using a different toolkit, most likely the <a href="https://www.qt.io/product/framework">QT framework</a>, since I found .NET 6 too buggy to work with. 
-					FuzeVD uses .NET Framework 4.7.2 - it works well for now, however staying on such an old framework for too long might lead to problems down the road.
-				</p>
-			</main>
-			<img src="/static/flashlight.webp" id="flashlight" style="aspect-ratio: 250 / 250; left: 380px; top: -176px;" alt="Here be photons" width="250" height="250">
+		<main>
+			<h1>FuzeVD - Video Downloader</h1>
+			<p>
+			An open-source Youtube video downloader. Once you install, you're all set since FuzeVD can update itself.<br><br>
+			<b>Download:</b>&nbsp;<a href="/static/fuzevd/fuzevd-installer.msi">Windows installer (64 bit)</a> - Windows 8 or newer is required, as well as <a href="https://www.python.org/downloads/">Python</a>.<br><br>
+			<center><i>"this is actually really f**kin good and so lightweight and simple. better than cliply"</i> - Someone on Discord</center><br>
+			FuzeVD 2.1.2 <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/2.1.2">GitHub</a>]</sup> was released on <time datetime="2025-09-26">26<sup>th</sup> of September, 2025</time>.<br><br>
+			Paste a <abbr title="You know what a URL is, right?">URL</abbr> and download into a video or audio format of your choice. Supports Youtube and many other websites <sup>[<a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md">Supported sites</a>]</sup>. <br><br>
+			FuzeVD uses the libraries <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> and <a href="https://ffmpeg.org/">ffmpeg</a>. This is just a <abbr>GUI</abbr> wrapper for yt-dlp so for complex operations you can use the included exe, but you will need to learn some commands.
+			</p>
+			<h2>Gallery</h2>
+			<div class="ImageGallery">
+			<figure>
+				<img src="/static/FuzeVD 2.1.0 Capture.png" alt="A screenshot of FuzeVD version 2.1.0" width="386" height="471"/>
+				<figcaption>Here is what FuzeVD looks like on Windows 10&#8482;</figcaption>
+			</figure>
+			<figure>
+				<img src="/static/fuzevd_2-0_capture1.png" alt="A screenshot of FuzeVD version 2.0" width="400" height="473"/>
+				<figcaption>An older version of FuzeVD on Windows 7&#8482;</figcaption>
+			</figure>
+			<figure>
+				<img src="/static/FuzeVD Updater capture.png" alt="A screenshot of FuzeVD Updater" width="306" height="239"/>
+				<figcaption>FuzeVD updater window</figcaption>
+			</figure>
+			</div>
+			<h2>FuzeVD-Updater</h2>
+			<p>
+				If newer versions are available, FuzeVD Updater can install them automatically. Click on the "Check For Updates" button to open the updater.<br>
+				Youtube sometimes pushes updates that break video downloaders, so if a download is not working you should <b>check for updates</b>; a patch may have been rolled out.
+				Fuze.page's repositories sometimes don't have the latest version of the underlying library, <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>, so an "external update yt-dlp" button was added which uses yt-dlp's built-in updater. 
+				Note that FuzeVD-updater will still show the last version that was downloaded from Fuze.page.
+			</p>
+			<h2>The future of FuzeVD</h2>
+			<p>
+				FuzeVD may be rewritten soon using a different toolkit, most likely the <a href="https://www.qt.io/product/framework">QT framework</a>, since I found .NET 6 too buggy to work with. 
+				FuzeVD uses .NET Framework 4.7.2 - it works well for now, however staying on such an old framework for too long might lead to problems down the road.
+			</p>
+		</main>
+		<img src="/static/flashlight.webp" id="flashlight" style="aspect-ratio: 250 / 250; left: 380px; top: -176px;" alt="Here be photons" width="250" height="250">
 <footer>
 	Oi mate, MIT loicense. <a href="https://github.com/Liteb0t/fuze-page-2">Source</a>? Website last updated <time datetime="2025-09-26">26<sup>th</sup> September 2025</time>
 </footer>
-
-		</div>
-		<img id="footer-art" src="/static/fuze-page-footer-art-v1.png" alt="page artwork">
 
 	</body>
 <style>

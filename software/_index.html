@@ -5,87 +5,50 @@
 		{{html_head.html}}
 	</head>
 	<body>
-		<div id="main-page">
-			{{header.html}}
-			{{navbar.html}}
-			<main>
-			<h1>Software</h1>
-			<article>
-			<h2>Fuze Mediaboard</h2>
+		{{header.html}}
+		{{navbar.html}}
+		<main>
+		<h1>Software</h1>
+		<article>
+		<h2>Fuze Mediaboard</h2>
+		<p>
+			A modern imageboard.<br>
+			<br>
+			<a href="/software/mediaboard/">Open project page</a>
+		</p>
+		</article>
+		<article>
+			<h2>FuzeVD</h2>
+			<figure style="float: right;">
+				<img src="/static/FuzeVD 2.1.0 Capture.png" alt="A screenshot of FuzeVD version 2.1.0" width="386" height="471"/>
+				<figcaption>Here is what FuzeVD looks like on Windows 10&#8482;</figcaption>
+			</figure>
 			<p>
-				A modern imageboard.<br>
-				<br>
-				<a href="/software/mediaboard/">Open project page</a>
+			FuzeVD can download Youtube videos into a variety of formats.<br><br>
+			This is a high-quality open-source utility which runs on Windows and has been maintained since 2021. It can also update automatically.<br><br>
+			<a href="/software/fuzevd/">Open project page</a>
 			</p>
-			</article>
-			<article>
-				<h2>FuzeVD</h2>
-				<figure style="float: right;">
-					<img src="/static/FuzeVD 2.1.0 Capture.png" alt="A screenshot of FuzeVD version 2.1.0" width="386" height="471"/>
-					<figcaption>Here is what FuzeVD looks like on Windows 10&#8482;</figcaption>
-				</figure>
-				<p>
-				FuzeVD can download Youtube videos into a variety of formats.<br><br>
-				This is a high-quality open-source utility which runs on Windows and has been maintained since 2021. It can also update automatically.<br><br>
-				<a href="/software/fuzevd/">Open project page</a>
-				</p>
-			</article>
-			<article>
-			<h2>Fuze Game</h2>
-				<figure style="float: right;">
-					<img src="/static/fuze-game-preview.jpg" width="500">
-					<figcaption>Completing the first level of Fuze Game</figcaption>
-				</figure>
-				<p>
-					A javascript browser game, complete with levels, enemy AI, and weapons.
-					I built it to be modular and easily customisable.
-					<br><br>
-					The player, all weapons, and projectiles are stored in objects called "sprites".
-					The sprite properties are stored in <abbr>JSON</abbr> files which contain properties such as
-					health, speed, and damage. Textures are stored separately in txt files.
-					<br><br>
-					The renderer reads the cached textures, including that of the level, and displays them on the screen.<br><br>
-					<a href="/fuze-game/">Click here to play the game</a>.
-				</p>
-			</article>
-			</main>
-			{{footer.html}}
-		</div>
-		{{footer-art.html}}
+		</article>
+		<article>
+		<h2>Fuze Game</h2>
+			<figure style="float: right;">
+				<img src="/static/fuze-game-preview.jpg" width="500">
+				<figcaption>Completing the first level of Fuze Game</figcaption>
+			</figure>
+			<p>
+				A javascript browser game, complete with levels, enemy AI, and weapons.
+				I built it to be modular and easily customisable.
+				<br><br>
+				The player, all weapons, and projectiles are stored in objects called "sprites".
+				The sprite properties are stored in <abbr>JSON</abbr> files which contain properties such as
+				health, speed, and damage. Textures are stored separately in txt files.
+				<br><br>
+				The renderer reads the cached textures, including that of the level, and displays them on the screen.<br><br>
+				<a href="/fuze-game/">Click here to play the game</a>.
+			</p>
+		</article>
+		</main>
+		{{footer.html}}
 	</body>
-	<script src="./fuze_tables.js" type="text/javascript"></script>
-	<script>
-		var company_table = new FuzeTable("company-table", 
-			{
-				json_path: "./CNeutral_country_data_partial.json"
-				,title: "Companies"
-				,entries_per_page: 30
-				,columns: {
-					"Market_Value_NOK": {
-						display_name: "Market Value (NOK)"
-						,visible: false
-					}
-					,"Market_Value_USD": {
-						display_name: "Market Value (USD)"
-					}
-					,"Incorporation_Country": {
-						display_name: "Incorporation Country"
-					}
-					,"Voting": {
-						visible: false
-					}
-					,"Ownership": {
-						visible: false
-					}
-				}
-				,clickable_rows: true
-				,on_row_click: doSomething
-			});
-		
-		function doSomething(index) {
-			alert(company_table.included_data[index].Name);
-		}
-	</script>
-
 </html>
 

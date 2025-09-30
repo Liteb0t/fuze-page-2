@@ -1,6 +1,5 @@
 html {
-	background: linear-gradient(#13C7, #ACFF), url("/static/Fuze stars.png"), linear-gradient(#000, #FFF);
-	display: flex;
+	background: url("/static/fuze-page-footer-art-v1.png") bottom/contain no-repeat, linear-gradient(#13C7, #ACF), url("/static/Fuze stars.png") fixed, linear-gradient(#000, #FFF);
 	min-height: 100%;
 	--footer-art-height: 90px;
 
@@ -28,24 +27,18 @@ html {
 }
 
 body {
-	flex-grow: 1;
-	margin: 0;
 	min-height: 100%;
-	padding: 20px 0 var(--footer-art-height) 0;
 	position: relative;
+	border: 4px ridge #888;
+	margin: 10px auto var(--footer-art-height);
+	width: 90%;
+	max-width: 73em;
 }
 #flashlight { display: none; width: 500px; height: 500px; pointer-events: none; z-index: 10; transition-duration: .75s; transition-timing-function: cubic-bezier(.4,.36,0,1); transition-property: opacity; }
 body.dark0 #flashlight,
 body.dark #flashlight { display: block; position: fixed; box-shadow: 0 0 0 9999px #000; }
 body.dark0 #flashlight { opacity: 0; }
 body.dark #flashlight { opacity: 1; }
-
-#main-page {
-	border: 4px ridge #888;
-	margin: 0 auto;
-	width: 90%;
-	max-width: 73em;
-}
 
 header {
 	background: linear-gradient(#000, #000, #666);
