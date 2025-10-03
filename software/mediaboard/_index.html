@@ -10,16 +10,20 @@
 		<main>
 			<h1>Fuze Mediaboard</h1>
 			<p>
-				Mediaboard 0.0.1<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.0.1">GitHub</a>]</sup> was released on <time datetime="2025-09-08">8<sup>th</sup> September 2025</time>.<br><br>
-				This software is based on what is commonly referred to as an "imageboard" or "messageboard". Users can upload audio, images, or video. I felt that the word "imageboard" is misleading and outdated because it implies that only images can be shared, hence the term "mediaboard".
-				Another reason I call it a mediaboard is to emphasise its modernity compared to current popular imageboards.<br><br>
+				Mediaboard 0.0.2<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.0.2">GitHub</a>]</sup> was released on <time datetime="2025-10-03">3<sup>rd</sup> October 2025</time>.<br>
+				<br>
 				<a href="https://github.com/Liteb0t/Mediaboard/">Click here to open the GitHub repository</a>.
 			</p>
+			<h2>Showcase</h2>
 			<figure>
 				<img src="dmp_Mediaboard.png"></img>
 				<figcaption>Fuze Mediaboard version 0.0.0 in action at <a href="https://dmpproductions.org/mediaboard/">/dmp/productions</a></figcaption>
 			</figure>
-			<h4>Back in the wild west days of the internet...</h4>
+			<p>Deploying Fuze Mediaboard? <a href="mailto:mash@fuze.page">Email me</a> and I can add your website here.</p>
+			<h2>About</h2>
+			<p>Fuze Mediaboard is based on what is commonly referred to as an "imageboard" or "messageboard". Users can share audio, images, or video with others. I felt that the word "imageboard" is misleading and outdated because it implies that only images can be shared, hence the term "mediaboard".
+			Another reason I call it a mediaboard is to emphasise its modernity compared to current popular imageboards.</p>
+			<h4>Back in the Wild West days of the internet...</h4>
 			<p>
 				...when imageboards first came around, they were impressive because users could not commonly share images for free at the time. Now however, imageboards such as <a href="https://www.4chan.org/">4chan</a> that were once on the bleeding edge are now seen as archaic, and for good reason. Almost all other major platforms including <a href="https://youtube.com/">YouTube</a> and <a href="https://soundcloud.com/">Soundcloud</a> have utilised new technologies, moving from <abbr title="Multi page application">MPA</abbr>s to <abbr title="Single page application">SPA</abbr>s.<br>
 			</p>
@@ -29,8 +33,41 @@
 			</p>
 			<h4>Fuze Mediaboard combines the best of the old and the new.</h4>
 			<p>
-				A SPA can improve the user experience <i>when implemented correctly</i>. For example, if you were to fill out a form on an MPA (such as writing a message) and made an action (such as deleting a previous message), the page would reload twice, wiping out anything you might have been doing on that page. By contrast, if you delete a message on a SPA you not only keep form content but also your scroll position. At the time of writing, the front-end for Fuze Mediaboard is contained entirely within one HTML file, weighing in at less than 20 kilobytes (although message deleting hasn't been implemented yet).
+			A SPA can improve the user experience <i>when implemented correctly</i>. For example, if you were to fill out a form on an MPA (such as writing a message) and made an action (such as deleting a previous message), the page would reload twice, wiping out anything you might have been doing on that page. By contrast, if you delete a message on a SPA you not only keep form content but also your scroll position.<br>
+			The front-end is very lightweight. It is contained within one 23KB HTML file (as of version 0.0.2).
 			</p>
+			<h2>Changelog</h2>
+			<article>
+				<time datetime="2025-10-03" style="float: right;">3<sup>rd</sup> October 2025</time>
+				<h3>0.0.2</h3>
+				<p>
+				<ul>
+					<li>Created `tokens.m4` and `config.ini` configuration files, so deployed instances can be updated more easily.</li>
+					<li>Users can delete their messages, verified by a key stored in the browser. No thread deletion yet.</li>
+					<li>If scrolled to the bottom, keeps scroll position at the bottom when reply container expands upward.</li>
+					<li>Allow upload of any file type, and allow Unicode characters in the filename.</li>
+				</ul>
+				<a href="https://github.com/Liteb0t/Mediaboard/compare/0.0.1...0.0.2">Full Changelog</a>
+				</p>
+			</article>
+			<article>
+				<time datetime="2025-09-08" style="float: right;">8<sup>th</sup> September 2025</time>
+				<h3>0.0.1</h3>
+				<p>
+				<ul>
+					<li>Fixed a crash where the server attempts to send a new message through websocket connections which no longer exist.</li>
+					<li>Order threads with the most recent replies first.</li>
+					<li>Show post dates in the user's local time rather than UTC.</li>
+				</ul>
+				</p>
+			</article>
+			<article>
+				<time datetime="2025-08-29" style="float: right;">29<sup>th</sup> August 2025</time>
+				<h3>0.0.0</h3>
+				<p>
+				Initial release.
+				</p>
+			</article>
 		</main>
 		{{footer.html}}
 	</body>
