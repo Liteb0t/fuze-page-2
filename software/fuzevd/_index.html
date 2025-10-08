@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
 		<title>Fuze.page - FuzeVD</title>
-		<meta name="description" content="Open-source video downloader. Download Youtube to mp4, mp3, and other formats. Wrapper for yt-dlp.">
-		<meta name="keywords" content="yt-dlp,download,Windows,Youtube,video,audio,youtube-dl,gui">
+		<meta name="description" content="Open-source video downloader. Download Youtube to mp4, mp3, and other formats. GUI for yt-dlp.">
+		<meta name="keywords" content="yt-dlp,download,Windows,Youtube,video,audio,youtube-dl,gui, wrapper, youtube mp4, youtube mp3, youtube download, open source">
 		{{html_head.html}}
 	</head>
 	<body>
@@ -15,7 +15,7 @@
 			An open-source Youtube video downloader. Once you install, you're all set since FuzeVD can update itself.<br><br>
 			<b>Download:</b>&nbsp;<a href="/static/fuzevd/fuzevd-installer.msi">Windows installer (64 bit)</a> - Windows 8 or newer is required, as well as <a href="https://www.python.org/downloads/">Python</a>.<br><br>
 			<center><i>"this is actually really f**kin good and so lightweight and simple. better than cliply"</i> - Someone on Discord</center><br>
-			FuzeVD 2.1.2 <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/2.1.2">GitHub</a>]</sup> was released on <time datetime="2025-09-26">26<sup>th</sup> of September, 2025</time>.<br><br>
+			FuzeVD 2.1.4 <sup>[<a href="https://github.com/Liteb0t/FuzeVD/releases/tag/2.1.4">GitHub</a>]</sup> was released on <time datetime="2025-10-08">8<sup>th</sup> of October, 2025</time>.<br><br>
 			Paste a <abbr title="You know what a URL is, right?">URL</abbr> and download into a video or audio format of your choice. Supports Youtube and many other websites <sup>[<a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md">Supported sites</a>]</sup>. <br><br>
 			FuzeVD uses the libraries <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> and <a href="https://ffmpeg.org/">ffmpeg</a>. This is just a <abbr>GUI</abbr> wrapper for yt-dlp so for complex operations you can use the included exe, but you will need to learn some commands.
 			</p>
@@ -47,6 +47,63 @@
 				This software uses .NET Framework 4.7.2 - it works well for now, however staying on such an old framework for too long might lead to problems down the road.<br>
 				Because of Youtube's recent crackdown on video downloaders (likely as a response to scraping for AI training data), the future of yt-dlp, and hence the future of FuzeVD, is uncertain.
 			</p>
+			<h2>Changelog</h2>
+			<article>
+				<time datetime="2025-10-08" style="float: right;">8<sup>th</sup> October 2025</time>
+				<h3>2.1.4</h3>
+				<ul>
+					<li>Keep yt-dlp's output of the download progress in one line.</li>
+					<li>Raised the cooldown of progress updates to 0.73 seconds.</li>
+				</ul>
+				<p>
+					These changes help avoid having too much text in the console output, which caused FuzeVD to lag on large downloads.<br>
+					<br>
+					This release is likely to be the last for a while, although the dependencies will be kept up-to-date as usual. FuzeVD has been around since 2021 and it's not going anywhere - as long as YouTube doesn't fully kill video downloaders.
+				</p>
+			</article>
+			<article>
+				<time datetime="2025-10-04" style="float: right;">4<sup>th</sup> October 2025</time>
+				<h3>2.1.3</h3>
+				<ul>
+					<li>Added new section to allow yt-dlp to read cookies from an installed web browser. This makes it possible to download age-restricted Youtube videos if the user is logged in. The box is editable to allow more options - see <a href="https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#filesystem-options">GitHub.com/yt-dlp/yt-dlp?tab=readme-ov-file#filesystem-options</a>.</li>
+					<li>Show a notification when a video has finished downloading or when yt-dlp returns an error.</li>
+					<li>Fixed the "Compatibility Mode" checkbox being locked when FuzeVD is started with an audio format selected.</li>
+					<li>Fixed a crash when using "Among Us drip" quality (144p).</li>
+				</ul>
+			</article>
+			<article>
+				<time datetime="2025-09-26" style="float: right;">26<sup>th</sup> September 2025</time>
+				<h3>2.1.2</h3>
+				<ul>
+					<li><del>Implemented a workaround for a recent issue with yt-dlp (see: <a class="issue-link js-issue-link" data-error-text="Failed to load title" data-id="3458087312" data-permission-text="Title is private" data-url="https://github.com/yt-dlp/yt-dlp/issues/14456" data-hovercard-type="issue" data-hovercard-url="/yt-dlp/yt-dlp/issues/14456/hovercard" href="https://github.com/yt-dlp/yt-dlp/issues/14456" aria-keyshortcuts="Alt+ArrowUp">yt-dlp/yt-dlp#14456</a>).</del> Now fixed on the yt-dlp side.</li>
+					<li>Link in bottom left now fetches its text content from the Fuze.page server.</li>
+					<li>Fixed FuzeVD Updater not deleting the <code>fuzevd-versions-server.fauv</code> file which caused the program to not uninstall fully.</li>
+					<li>Minor UI updates</li>
+				</ul>
+			</article>
+			<article>
+				<time datetime="2025-09-03" style="float: right;">3<sup>rd</sup> September 2025</time>
+				<h3>2.1.1</h3>
+				<ul>
+					<li>All four checkboxes in the settings panel now load the previous state, instead of just the AV1 toggle.</li>
+					<li>Directory picker icon is now shown correctly instead of being cropped. This visual bug was caused by GUI changes in Windows since Windows 7.</li>
+					<li>Added <code>--mtime</code> parameter to the command. This is because yt-dlp changed the default behaviour to <em>not</em> save the server-side video modification date in <a href="https://github.com/yt-dlp/yt-dlp/releases/tag/2025.07.21">release 2025.07.21</a>.</li>
+				</ul>
+			</article>
+			<article>
+				<time datetime="2025-01-10" style="float: right;">10<sup>th</sup> January 2025</time>
+				<h3>2.1.0</h3>
+				<p>
+				This release contains major bug fixes and a few additions.<br>
+				The previously selected format and quality will now load on application startup.<br>
+				Removed the broken notification feature <sup>Note: re-implemented in 2.1.3</sup> and added options to:
+				<ul>
+					<li>Save chapters as separate video files.</li>
+					<li>Include the video ID (which is now excluded by default).</li>
+					<li>Disable the downloading of AV1-encoded video.</li>
+				</ul>
+				</p>
+			</article>
 		</main>
 		{{footer.html}}
 	</body>
