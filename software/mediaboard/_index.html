@@ -12,11 +12,36 @@
 		<main>
 			<h1>Fuze Mediaboard</h1>
 			<p>
-				Mediaboard 0.0.4<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.0.4">GitHub</a>]</sup> was released on <time datetime="2025-11-23">23<sup>rd</sup> November 2025</time>.<br>
+				Mediaboard 0.0.5<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.0.5">GitHub</a>]</sup> was released on <time datetime="2026-01-12">12<sup>th</sup> January 2026</time>.<br>
 				<br>
 				<a href="https://github.com/Liteb0t/Mediaboard/">Click here to open the GitHub repository</a>.
 			</p>
+			<h2>About</h2>
+			<p>
+				Fuze Mediaboard is a platform where users can share audio, images, or video with others. It features a powerful permissions system and is intended as a replacement for Discord. This software is made to be self-hosted, meaning it runs on your system instead of being run centrally.
+			</p>
+			<h3>Why choose Fuze?</h3>
+			<h4>Freedom</h4>
+			<p>
+				Centralised platforms such as Discord have been progressively ramping up censorship for a long time now, and this has only accelerated with recent age-verification regulations and AI moderation. It is clear that the future of free speech on the internet lies in decentralised and federated platforms. Fuze Mediaboard gives <i>you</i> control over your corner of the internet.
+			</p>
+			<h4>Media-sharing</h4>
+			<p>
+				Additionally, Discord <a href="https://www.reddit.com/r/discordapp/comments/18d92s5/discord_images_get_saved_as_webp_now/">destroys image quality</a> to save on storage space, and you cannot opt-out of this. They also randomly delete old files. Fuze Mediaboard lets you set how content is managed on your server, so you can share media without nasty surprises.
+			</p>
+			<h4>Speed</h4>
+			<p>
+				The backend was written in C++, which means it will take fewer resources than almost any comparable software out there.<br>
+				It's not just the server that can run on a toaster - The front-end is lightweight and made with plain Javascript, making it unique among all the slow, bloated webapps out there now which pull in many megabytes of dependencies.
+			</p>
+			<h3>Future plans</h3>
+			<p>
+				Currently it's not as easy as it could be to deploy. The goal is for a user to be able to download an installer wizard, follow some graphical prompts, and then it will just run.<br>
+				<br>
+				Key features to implement include: Voice channels and screen-sharing; Federation of the accounts system, possibly using <a href="https://spec.matrix.org/v1.17/identity-service-api/">Matrix's Identity Service API</a>; Configurable archival and auto-deletion of files; Infinite scroll; Custom constraints in permissions; Moderation tools including reporting.
+			</p>
 			<h2>Showcase</h2>
+			<p>Here is a list of places where Fuze Mediaboard is currently being used:</p>
 			<ul>
 				<li>
 			<figure>
@@ -24,30 +49,35 @@
 				<figcaption>Fuze Mediaboard version 0.0.0 in action at <a href="https://dmpproductions.org/mediaboard/">/dmp/productions</a></figcaption>
 			</figure>
 				</li>
-				<li><a href="https://blancgarou.com/">Blancgarou</a> uses Mediaboard to embed threads in several pages.
-				</li>
+				<li><a href="https://blancgarou.com/">Blancgarou</a> uses Mediaboard to embed threads in several pages.</li>
+				<li><a href="https://fuze.page/mediaboard/">Right here on FUZE.page</a>.</li>
 			</ul>
-			<p>Deploying Fuze Mediaboard? <a href="mailto:mash@fuze.page">Email me</a> and I can add your website here.</p>
-			<h2>About</h2>
-			<p>Fuze Mediaboard is based on what is commonly referred to as an "imageboard" or "messageboard". Users can share audio, images, or video with others. I felt that the word "imageboard" is misleading and outdated because it implies that only images can be shared, hence the term "mediaboard".
-			Another reason I call it a mediaboard is to emphasise its modernity compared to current popular imageboards.</p>
-			<h4>Back in the Wild West days of the internet...</h4>
-			<p>
-				...when imageboards first came around, they were impressive because users could not commonly share images for free at the time. Now however, imageboards such as <a href="https://www.4chan.org/">4chan</a> that were once on the bleeding edge are now seen as archaic, and for good reason. Almost all other major platforms including <a href="https://youtube.com/">YouTube</a> and <a href="https://soundcloud.com/">Soundcloud</a> have made use of new technology, moving from <abbr title="Multi page application">MPA</abbr>s to <abbr title="Single page application">SPA</abbr>s.<br>
-			</p>
-			<h4>Not all of the changes in the web have been good.</h4>
-			<p>
-				Many SPAs run slower for most users than the earlier MPAs were. As pointed out in <a href="https://tonsky.me/blog/js-bloat/">Tonsky's blog</a>, many modern websites have become extremely bloated, packing in several megabytes of Javascript even for a simple landing page. <i>Бог знает</i> what it's all used for.<br>
-			</p>
-			<h4>Fuze Mediaboard combines the best of the old and the new.</h4>
-			<p>
-			A SPA can improve the user experience <i>when implemented correctly</i>. For example, if you were to fill out a form on an MPA (such as writing a message) and made an action (such as deleting a previous message), the page would reload twice, wiping out anything you might have been doing on that page. By contrast, if you delete a message on a SPA you not only keep form content but also your scroll position.<br>
-			The front-end is very lightweight. It is contained within one 30KB HTML file (as of version 0.0.3).
-			</p>
-			<h4>Deploy at your own risk.</h4>
-			<p>This software should not be considered stable or secure until the 0.1.0 release. It will be deemed "complete" at the 1.0.0 release, at which point it will be ready to be deployed at scale and compete against established messageboards such as <a href="https://vichan.info">Vichan</a>. Many important features - not least moderation tools - are yet to be added.
-			</p>
+			<p>Deploying Fuze Mediaboard? <a href="mailto:mash@fuze.page">Email me</a> and I can add your website to this list.</p>
 			<h2>Changelog</h2>
+			<article>
+				<time datetime="2026-01-12" style="float: right;">12<sup>th</sup> January 2026</time>
+				<h3>0.0.5</h3>
+				<ul>
+					<li>Discord-style permissions system
+					<ul>
+						<li>Currently there are four different permissions: Manage permissions, View thread, Create thread, Send message.</li>
+						<li>View thread and Send message can be set on any thread, whilst all four can be set globally.</li>
+						<li>Thread permissions override global permissions.</li>
+					</ul>
+					</li>
+						<li>Fixed a bug where uploads failed if they took longer than ten seconds.</li>
+						<li>Fixed a bug where an extra newline was added at the end of files.</li>
+						<li>Reply container
+					<ul>
+						<li>Is hidden when the user does not have permission to post.</li>
+						<li>Is no longer expanded by default, but expands when the "Reply" button is clicked in a message.</li>
+						<li>Shows the length of post content when limit is near or exceeded.</li>
+					</ul>
+					</li>
+					<li>More image and audio formats are embedded.</li>
+				</ul>
+				<a href="https://github.com/Liteb0t/Mediaboard/compare/0.0.4...0.0.5">Full Changelog</a>
+			</article>
 			<article>
 				<time datetime="2025-11-23" style="float: right;">23<sup>rd</sup> November 2025</time>
 				<h3>0.0.4</h3>
