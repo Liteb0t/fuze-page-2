@@ -12,7 +12,7 @@
 		<main>
 			<h1>Fuze Mediaboard</h1>
 			<p>
-				Mediaboard 0.0.5<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.0.5">GitHub</a>]</sup> was released on <time datetime="2026-01-12">12<sup>th</sup> January 2026</time>.<br>
+				Mediaboard 0.0.6<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.0.6">GitHub</a>]</sup> was released on <time datetime="2026-04-09">9<sup>th</sup> April 2026</time>.<br>
 				<br>
 				<a href="https://github.com/Liteb0t/Mediaboard/">Click here to open the GitHub repository</a>.
 			</p>
@@ -54,6 +54,24 @@
 			</ul>
 			<p>Deploying Fuze Mediaboard? <a href="mailto:mash@fuze.page">Email me</a> and I can add your website to this list.</p>
 			<h2>Changelog</h2>
+			<article>
+				<time datetime="2026-04-09" style="float: right;">9<sup>th</sup> April 2026</time>
+				<h3>0.0.6</h3>
+				<p>This will likely be the last 0.0.x release; 0.1 will come with breaking changes, such as password hashing done by libsodium rather than pgcrypto (breaking accounts), and multiple boards (breaking URLs).</p>
+				<ul>
+				<li>Use CMake build system, removing meson.build and Makefiles.</li>
+				<li><a href="https://github.com/Liteb0t/Mediaboard/commit/28189e563886b64af816ecc89cd4c62d4fb7d3c7">Fixed permission inheritance order</a></li>
+				<li>Fixed a bug where the account-group associations would duplicate on startup.</li>
+				<li>Reply count no longer includes deleted messages</li>
+				<li>Added <code>?display=embed</code> support on threads list</li>
+				<li>Add "Delete post" permission</li>
+				<li><a href="https://github.com/Liteb0t/Mediaboard/commit/5d766db3db95af1304da1aed848da128084fad1d">Embed thumbnail in file upload list instead of full image</a></li>
+				<li>Fixed a number of bugs in the front-end</li>
+				<li>Add option in config to change thumbnail file format</li>
+				<li>Files opened in a new tab now save with the original filename.</li>
+				</ul>
+				<a href="https://github.com/Liteb0t/Mediaboard/compare/0.0.5...0.0.6">Full Changelog</a>
+			</article>
 			<article>
 				<time datetime="2026-01-12" style="float: right;">12<sup>th</sup> January 2026</time>
 				<h3>0.0.5</h3>
