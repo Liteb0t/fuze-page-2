@@ -1,0 +1,154 @@
+<!-- Warning: this file is auto-generated, so edits will be overwritten -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>Fuze Mediaboard documentation</title>
+		<meta name="description" content="Open-source modern imageboard engine.">
+		<meta name="keywords" content="open source, software, free software, imageboard, messageboard, 4chan, yotsuba, vichan, jschan, c++, CMake, server">
+		<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/styles-v4.css">
+<script src="/static/script.js"></script>
+
+	</head>
+	<body>
+		<header>
+	<a href="/" id="logo">
+		<img src="/static/fuze-min.png" height="73" alt="Fuze.page logo">
+	</a>
+	<div class="HeaderSpacer">
+		<div class="HeaderContent">
+			<i>Serving the interwebz since <time>2020</time></i><br>
+			<span id="test-for-old-css"><b>Warning! </b>If you can see this text, your browser is too old to load some of the <abbr>CSS</abbr> styles.</span>
+		</div>
+		<button id="dark_mode_switch">Switch to dark mode</button>
+		<div class="HeaderBackground"></div>
+	</div>
+</header>
+
+		<nav class="top-navigation-bar">
+	<a href="/">News</a>
+	<a href="/software/">Software</a>
+	<a href="/software/fuzevd/">FuzeVD</a>
+	<a href="/fuze-game/">Fuze Game</a>
+	<a href="/mediaboard/">Mediaboard</a>
+	<!--<a href="https://github.com/Liteb0t/">Github</a>-->
+</nav>
+
+		<main>
+			<a href="/software/mediaboard/">Fuze Mediaboard</a> is a self-hosted multimedia messaging platform.
+			<h2>Fuze Mediaboard documentation/tutorial</h2>
+			<p>
+			Running a chat server may seem daunting, but hosting a basic instance is actually simple. As the tutorial progresses, you will start with running a local server, which will evolve into a platform viewable on the web.<br><br>
+			Supported OS: FreeBSD, Linux, MacOS<br><br>
+			<i>A more condensed version for advanced users is available in the <a href="https://github.com/Liteb0t/Mediaboard">README on the GitHub page</a>.</i>
+			</p>
+			<h2>Getting started</h3>
+			<h3>Compiling from source</h3>
+			<p>
+			Prerequisites: Git, CMake, ImageMagick, GNU M4, Boost 1.88, SQLite OR PostgreSQL.<br><br>
+			First ensure that submodules are downloaded. Use this command:<br>
+			<code>git submodule update --init --recursive</code><br>
+			Now, to compile the server:<br>
+			<code>cmake -B build</code><br>
+			<code>cmake --build build</code><br>
+			<code>cmake --install build --prefix install</code>
+			</p>
+			<h3>Running the server</h3>
+			<p>
+			<ul>
+				<li>If compiled from source, execute <code>./install/bin/MediaboardServer</code></li>
+				<li>If using the AppImage, mark the file as executable and then run it</li>
+			</ul>
+			When starting the program for the first time, add <code>--create_owner</code> to the command.
+			<figure>
+				<img src="Fuze_Mediaboard_0.1.3_register_owner_account_link.png" alt="Registration link">
+				<figcaption>An invitation link will appear in the command-line output</figcaption>
+			</figure>
+			<figure>
+				<img src="Fuze_Mediaboard_0.1.3_accept_invitation.png" alt="Accepting the invitation">
+				<figcaption>A registration form is shown when invitation is opened</figcaption>
+			</figure>
+			After registering the owner account, you can now interact with the server
+			</p>
+			<h2>Making it public</h2>
+			<p>
+			Fuze mediaboard requires HTTPS for secure authentication to work. It is recommended to use a reverse proxy like <a href="https://nginx.org/">NGINX</a>. SSL certificates (required for HTTPS) can be obtained for free using <a href="https://certbot.eff.org/">Certbot</a>.<br>
+			<a href="nginx_example.txt">Example NGINX config</a>.<br><br>
+			Ensure your IP is accessible to the outside world, using port forwarding if necessary.<br>
+			</p>
+			<h3>Permissions</h3>
+			<p>
+			By default, only the owner can read and write messages.
+			<ol>
+				<li>After logging in, click on the "Manage server" tab in the toolbar as an administrator.</li>
+				<li>In the Manage permissions tab, click "Add group" and select "Public".</li>
+				<li>Change setting to <i>Allow</i> for the permissions you want to grant.</li>
+			</ol>
+			<figure>
+				<img src="Fuze_Mediaboard_0.1.3_manage_server.png" alt="Public permissions set in the Manage Server page">
+				<figcaption>Granted read/write permissions to Public</figcaption>
+			</figure>
+			Permissions can also be set on threads, which inherit from server-level settings.<br><br>
+			Leaving a setting on <i>Inherit</i> means the permission will be searched by traversing up the inheritance tree (if applicable), and cascading down the group heirarchy until a non-inherited setting is found. If no permission setting is found by the time inheritance passes the server-level setting for <i>Public</i>, permission is denied.<br><br>
+			If both a user and group permission are set on an object, the user setting takes priority.
+			<figure>
+				<img src="Fuze_Mediaboard_0.1.3_manage_users.png" alt="Manage Users tab">
+				<figcaption>Adding groups to a user on the <i>Manage users</i> page.</figcaption>
+			</figure>
+			<figure>
+				<img src="Fuze_Mediaboard_0.1.3_manage_groups.png" alt="Manage Groups tab">
+				<figcaption>In <i>Manage groups</i> you can add/delete groups, change their heirarchy, and dismiss members.</figcaption>
+			</figure>
+			</p>
+			<h2>Configuration</h2>
+			<p>
+			There exist two configuration files: <code>config.ini</code> and <code>frontend/tokens.m4</code>. Changes made to <code>config.ini</code> are read when the server starts. These options can also be passed directly in the command line, which will override what is set in the config file.
+			<table>
+				<tr><th colspan=2>config.ini</th></tr>
+				<tr><td>server_port</td><td>Serves http://localhost:8300 by default. Change this if running multiple Mediaboard instances.</td></tr>
+				<tr><td>threads</td><td>Number of async threads. Values greater than 1 should be used for testing only.</td></tr>
+				<tr><td>max_http_body</td><td>For limiting the maximum size of user-uploaded files and to prevent abuse.</td></tr>
+				<tr><td>strip_metadata</td><td>Removes metadata from uploaded images (except SVG files).</td></tr>
+				<tr><td>thumbnail_file_exension<br>thumbnail_size</td><td>Format must be supported by ImageMagick. Please note that any change in this setting will not apply to existing thumbnails - those will have to be converted manually.</td></tr>
+				<tr><td>avif_thumbnails<br>
+					heic_thumbnails<br>
+					webp_thumbnails<br>
+					mp4_thumbnails<br>
+					webm_thumbnails</td><td>Requires the respective formats to be installed in the instance of ImageMagick used - Use <code>magick -list format</code> to see if they are supported.<br>Video formats require ffmpeg.</td></tr>
+				<tr><td>sqlite_database_file</td><td>Path to SQLite database file. Ignored when compiled with the PostgreSQL interface.</td></tr>
+				<tr><td>
+				postgresql_host<br>
+				postgresql_port<br>
+				postgresql_user<br>
+				postgresql_database_name</td><td>PostgreSQL database connection parameters. Only used when compiled with the PostgreSQL interface.</td></tr>
+			</table>
+			Changes made to <code>tokens.m4</code> require rebuilding the project via CMake.
+			<table>
+				<tr><th colspan=2>frontend/tokens.m4</th></tr>
+				<tr><td>_SITE_NAME<br>_FAVICON_URL<br>_SHOW_WATERMARKS</td><td>Cosmetic settings.</td></tr>
+				<tr><td>_THUMBNAIL_FILE_FORMAT</td><td>Deprecated; ignored on files uploaded since 0.1.2</td></tr>
+				<tr><td>_THUMBNAIL_SIZE</td><td>Maximum thumbnail size in pixels. Should match <code>thumbnail_size</code> in config.ini for best results.</td></tr>
+				<tr><td>_FILE_SIZE_LIMIT_MB</td><td>Returns error message when user attempts to upload a file larger than this. It is recommended to also edit <code>max_http_body</code> in config.ini if changing this.</td></tr>
+			</table>
+			</p>
+			<h3>Optional: Using PostgreSQL as the database</h3>
+			<p>
+			Alternatively, you can build with the PostgreSQL interface instead:<br>
+			<code>cmake -B build -D FUZEDBI_USE_POSTGRES=ON</code><br>
+			<br>
+			Set the following options in <code>config.ini</code> to correspond to the database:
+			<code>postgresql_host</code>,
+			<code>postgresql_port</code>,
+			<code>postgresql_user</code>, and
+			<code>postgresql_database_name</code>.
+			</p>
+		</main>
+		<img src="/static/flashlight.webp" id="flashlight" style="aspect-ratio: 250 / 250; left: 380px; top: -176px;" alt="Here be photons" width="250" height="250">
+<footer>
+	MIT license. <a href="https://github.com/Liteb0t/fuze-page-2">View source</a>. Website last updated <time datetime="2026-06-24">24<sup>th</sup> June 2026</time>
+</footer>
+
+	</body>
+</html>
+

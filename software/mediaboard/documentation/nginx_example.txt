@@ -1,0 +1,57 @@
+server {
+	listen 80;
+	listen [::]:80;
+	server_name example.com;
+	return 301 https://example.com$request_uri;
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	server_name www.example.com;
+
+	# SSL stuff
+	ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+	return 301 https://example.com$request_uri;
+}
+
+server {
+	listen 443 ssl;
+	listen [::]:443 ssl;
+	server_name example.com;
+
+	root /var/www/example.com/example/;
+	index index.html;
+	charset_types text/html text/xml text/plain application/javascript application/rss+xml;
+	charset utf-8;
+	error_page 404 /error.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+		autoindex on;
+	}
+	location /mediaboard/ {
+		proxy_pass http://localhost:8300/; # Fuze Mediaboard
+
+    	proxy_set_header X-Real-IP $remote_addr;
+    	proxy_set_header Host $host;
+    	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_pass_request_headers on;
+		client_max_body_size 200M;
+		proxy_redirect / /mediaboard/;
+	
+	    # WebSocket support
+		proxy_http_version 1.1;
+		proxy_set_header Upgrade $http_upgrade;
+	    proxy_set_header Connection "upgrade";
+		proxy_send_timeout 7d;
+		proxy_read_timeout 7d;
+	}
+
+	# SSL stuff
+	ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
+}
