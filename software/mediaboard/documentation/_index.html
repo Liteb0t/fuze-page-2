@@ -47,7 +47,7 @@
 			</p>
 			<h2>Making it public</h2>
 			<p>
-			Fuze mediaboard requires HTTPS for secure authentication to work. It is recommended to use a reverse proxy like <a href="https://nginx.org/">NGINX</a>. SSL certificates (required for HTTPS) can be obtained for free using <a href="https://certbot.eff.org/">Certbot</a>.<br>
+			Fuze mediaboard requires HTTPS for secure remote authentication. It is recommended to use a reverse proxy like <a href="https://nginx.org/">NGINX</a>. SSL certificates (required for HTTPS) can be obtained for free using <a href="https://certbot.eff.org/">Certbot</a>.<br>
 			<a href="nginx_example.txt">Example NGINX config</a>.<br><br>
 			Ensure your IP is accessible to the outside world, using port forwarding if necessary.<br>
 			</p>
@@ -106,7 +106,23 @@
 				<tr><td>_FILE_SIZE_LIMIT_MB</td><td>Returns error message when user attempts to upload a file larger than this. It is recommended to also edit <code>max_http_body</code> in config.ini if changing this.</td></tr>
 			</table>
 			</p>
-			<h3>Optional: Using PostgreSQL as the database</h3>
+			<h2>Embedding into a webpage</h2>
+			<p>
+			Fuze Mediaboard can be embedded inside of a page by using an iframe:<br>
+			<code>&lt;iframe src="http://localhost:8300/">&lt;/iframe></code>
+			<figure>
+				<img src="Fuze_Mediaboard_0.1.3_iframe.png">
+				<figcaption>Using Fuze Mediaboard inside of an iframe</figcaption>
+			</figure>
+			It can be shown with controls hidden by adding <code>display=embed</code> as a URL parameter:</br>
+			<pre><code>&lt;iframe src="http://localhost:8300/?display=embed">&lt;/iframe></code></pre>
+			<figure>
+				<img src="Fuze_Mediaboard_0.1.3_iframe_embed.png">
+				<figcaption>Iframe with <code>display=embed</code></figcaption>
+			</figure>
+			<code>display=embed</code> also works with individual threads - just add <code>&thread=0</code> to the path. Embedding Mediaboard threads has a number of potential uses, for example adding comment sections on blog posts, or an artist uploading his/her latest work.
+			</p>
+			<h2>Optional: Using PostgreSQL as the database</h2>
 			<p>
 			Alternatively, you can build with the PostgreSQL interface instead:<br>
 			<code>cmake -B build -D FUZEDBI_USE_POSTGRES=ON</code><br>
@@ -117,6 +133,28 @@
 			<code>postgresql_user</code>, and
 			<code>postgresql_database_name</code>.
 			</p>
+			<h3>Start cluster</h3>
+			<p>
+			This may be skipped on certain Linux distros such as Debian. Check if the server is already running with <code>systemctl status postgresql</code> or <code>service postgresql status</code><br>
+			<code>initdb -D /var/db/postgres/18/main/</code><br>
+					<code>pg_ctl -D /var/db/postgres/18/main start</code><br>
+			</p>
+			<h3>Create database</h3>
+			<p>
+<code>su -</code><br>
+<code>su postgres</code><br>
+<code>createdb fuze_mediaboard</code><br>
+<code>psql -d fuze_mediaboard</code><br>
+fuze_mediaboard=# <code>CREATE USER mediaboard_server WITH PASSWORD '<password>';</code><br>
+fuze_mediaboard=# <code>GRANT ALL ON SCHEMA public TO mediaboard_server;</code><br>
+fuze_mediaboard=# <code>\q</code><br>
+To import the database template, go back to your user account and run:<br>
+<code>psql -U postgres fuze_mediaboard < database_template.sql</code><br>
+Add the following line to <code>pg_hba.conf</code><sup>[<a href="https://www.postgresql.org/docs/15/auth-pg-hba-conf.html">documentation</a>]</sup>. Insert it at the top of the table so that it won't be overridden by other settings:<br>
+<pre><code>local      fuze_mediaboard    mediaboard_server           password</code></pre><br>
+<code>mediaboard_server</code> is the PostgreSQL user which interacts with the database named <code>fuze_mediaboard</code>.\
+Set the environment variable <code>FUZE_MEDIABOARD_PASSWORD</code> with the same password used in the CREATE_USER statement earlier. Open a new terminal window or reboot your system to apply the change.
+		</p>
 		</main>
 		{{footer.html}}
 	</body>

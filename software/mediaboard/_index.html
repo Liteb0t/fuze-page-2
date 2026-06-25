@@ -12,7 +12,7 @@
 		<main>
 			<h1>Fuze Mediaboard</h1>
 			<p>
-				Mediaboard 0.1.2<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.1.2">GitHub</a>]</sup> was released on <time datetime="2026-05-29">29<sup>th</sup> May 2026</time>.<br>
+				Mediaboard 0.1.3<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.1.3">GitHub</a>]</sup> was released on <time datetime="2026-06-25">25<sup>th</sup> June 2026</time>.<br>
 				<br>
 				<a href="https://github.com/Liteb0t/Mediaboard/">GitHub repository</a>
 				<a href="./documentation/">Documentation</a>
@@ -51,6 +51,21 @@
 			</ul>
 			<p>Deploying Fuze Mediaboard? <a href="mailto:mash@fuze.page">Email me</a> and I can add your website to this list.</p>
 			<h2>Changelog</h2>
+			<article>
+				<time datetime="2026-06-33" style="float: right;">25<sup>th</sup> June 2026</time>
+				<h3>0.1.3</h3>
+				<ul>
+				<li>Videos can now be embedded by enabling the <code>mp4_thumbnails</code> and <code>webm_thumbnails</code> options.</li>
+				<li>Added <code>UPLOAD_FILE</code> permission.</li>
+				<li>Added <code>max_http_body</code> config.</li>
+				<li>Added optional SVG embedding.</li>
+				<li>Changed thread locations from <code>/thread/73/</code> to <code>?thread=73</code></li>
+				<li>Fixed a security issue by checking client permissions on websockets.</li>
+				<li>Fixed bug where permission collections couldn't be deleted from threads.</li>
+				<li>Fixed bug where non-HEIC images were deleted when <code>convert_heic_to_jpg</code> was enabled.</li>
+				<li>Removed _ROOT_URL and _WEBSOCKET_URL macros, for easier setup.</li>
+				</ul>
+			</article>
 			<article>
 				<time datetime="2026-05-29" style="float: right;">29<sup>th</sup> May 2026</time>
 				<h3>0.1.2</h3>
