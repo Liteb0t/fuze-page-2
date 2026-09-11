@@ -38,19 +38,19 @@
 		<main>
 			<h1>Fuze Mediaboard</h1>
 			<p>
-				Mediaboard 0.1.3<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.1.3">GitHub</a>]</sup> was released on <time datetime="2026-06-25">25<sup>th</sup> June 2026</time>.<br>
+				Mediaboard 0.2<sup>[<a href="https://github.com/Liteb0t/Mediaboard/releases/tag/0.2">GitHub</a>]</sup> was released on <time>11<sup>th</sup> September 2026</time>.<br>
 				<br>
 				<a href="https://github.com/Liteb0t/Mediaboard/">GitHub repository</a>
 				<a href="./documentation/">Documentation</a>
 			</p>
 			<h2>About</h2>
 			<p>
-				Fuze Mediaboard is a platform where users can share audio, images, or video with others. It features a powerful permissions system and is intended as a replacement for Discord. This software is made to be self-hosted, meaning it runs on your system instead of being run centrally.
+				Fuze Mediaboard is a platform where users can share audio, images, or video with others. It is intended as a replacement for Discord, and has important features such as screenshare, voice chat, and heirarchical permissions. This software is designed to be self-hosted, meaning it runs on your system instead of being run centrally.
 			</p>
 			<h3>Why choose Fuze?</h3>
 			<h4>Freedom</h4>
 			<p>
-				Centralised platforms such as Discord have been progressively ramping up censorship for a long time now, and this has only accelerated with recent age-verification regulations and AI moderation. It is clear that the future of free speech on the internet lies in decentralised and federated platforms. Fuze Mediaboard gives <i>you</i> control over your corner of the internet.
+				Centralised platforms such as Discord have been progressively ramping up restrictions on content for a long time now, and this has only accelerated with recent age-verification regulations and AI moderation. It is clear that the future of free speech on the internet lies in independent platforms. Fuze Mediaboard gives <i>you</i> control over your corner of the internet.
 			</p>
 			<h4>Media-sharing</h4>
 			<p>
@@ -65,18 +65,33 @@
 			<p>
 				Currently it's not as easy as it could be to deploy. The goal is for a user to be able to download an installer wizard, follow some graphical prompts, and then it will just run.<br>
 				<br>
-				Key features to implement include: Voice channels and screen-sharing; Federation of the accounts system, possibly using <a href="https://spec.matrix.org/v1.17/identity-service-api/">Matrix's Identity Service API</a>; Configurable archival and auto-deletion of files; Infinite scroll; Custom constraints in permissions; Moderation tools including reporting.
+				Key features to implement include: Configurable archival and auto-deletion of files; Infinite scroll; Custom constraints in permissions; Moderation tools including reporting; OAuth2 API.
 			</p>
 			<h2>Showcase</h2>
 			<p>Some websites using Fuze Mediaboard:</p>
 			<ul>
 				<li><a href="https://dmpproductions.org/mediaboard/">/dmp/productions</a></li>
 				<li><a href="https://blancgarou.com/">Blancgarou</a></li>
-				<li><a href="https://stmaryrotherhithe.com/">St Mary's church</a></li>
 				<li><a href="https://fuze.page/mediaboard/">Right here on FUZE.page</a>.</li>
 			</ul>
 			<p>Deploying Fuze Mediaboard? <a href="mailto:mash@fuze.page">Email me</a> and I can add your website to this list.</p>
 			<h2>Changelog</h2>
+			<article>
+				<time style="float: right;">11<sup>th</sup> September 2026</time>
+				<h3>0.2 - 9/11 remembrance release</h3>
+				<ul>
+				<li>Added "Live" page, where users can create a "Room" to share video or audio, like a Discord voice channel.</li>
+				<li>Server can now have multiple "boards", and like existing Threads, they have customizable permissions.</li>
+				<li>Split into two separate projects. The new repository, FuzeHttp, is the C++ web framework on which Mediaboard stands.</li>
+				<li>Refactored C++ code to use modules.</li>
+				<li>Implemented cache control.</li>
+				<li>Moved all configuration from `tokens.m4` to runtime at `config.ini`.</li>
+				<li>Replaced boost::filesystem with std::filesystem</li>
+				<li>Started work on adding thread-safety. Multi-threading is still experimental.</li>
+				<li>Improved input validation.</li>
+				<li>Changed license from MIT to Fuze Human-oriented License v1</li>
+				</ul>
+			</article>
 			<article>
 				<time datetime="2026-06-33" style="float: right;">25<sup>th</sup> June 2026</time>
 				<h3>0.1.3</h3>
@@ -261,7 +276,7 @@
 		</main>
 		<img src="/static/flashlight.webp" id="flashlight" style="aspect-ratio: 250 / 250; left: 380px; top: -176px;" alt="Here be photons" width="250" height="250">
 <footer>
-	MIT license. <a href="https://github.com/Liteb0t/fuze-page-2">View source</a>. Website last updated <time datetime="2026-09-03">3<sup>rd</sup> September 2026</time>
+	MIT license. <a href="https://github.com/Liteb0t/fuze-page-2">View source</a>. Website last updated <time>11<sup>th</sup> September 2026</time>
 </footer>
 
 	</body>
