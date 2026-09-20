@@ -29,7 +29,7 @@ html {
 body {
 	min-height: 100%;
 	position: relative;
-	border: 4px ridge #888;
+	border: 3px solid #333;
 	margin: 10px auto var(--footer-art-height);
 	width: 90%;
 	max-width: 73em;
@@ -85,18 +85,30 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 
-	a {
+	a, button, .Button {
+		&:hover:not(:disabled) {
+			background: linear-gradient(#FEC, #EC9);
+			&:is(a) {
+				color: #000;
+				text-decoration: underline;
+			}
+			&:active {
+				border: none;
+				border-left: 2px solid #030;
+			}
+		}
+		background: none;
+		border: none;
+		&.RightAligned {
+			margin-left: auto;
+			border-left: 2px solid #030;
+			border-right: none;
+		}
 		border-right: 2px solid #030;
 		color: #FFF;
 		font-size: 20px;
 		padding: 6px 12px;
 		text-decoration: none;
-
-		&:hover {
-			background: linear-gradient(#FEC, #EC9);
-			color: #000;
-			text-decoration: underline;
-		}
 	}
 }
 
@@ -141,6 +153,26 @@ footer {
 	padding: 8px;
 }
 
-button {
+button, input[type=file]::file-selector-button, input[type=button], .Button {
+	background-color: #EEE;
+	border: 2px outset #F8F8F8;
 	border-radius: 0;
+	font-size: 1rem;
+	font-family: var(--interactive-font);
+	padding: 0.15rem 0.5rem;
+	box-sizing: border-box;
+	text-decoration: none;
+	&:hover:not(:disabled) {
+		background-color: #CCC;
+		cursor: pointer;
+		&:active {
+			background-color: #BBB;
+			border-style: inset;
+			border-color: #EEE;
+		}
+	}
+}
+
+pre {
+	white-space: pre-wrap;
 }

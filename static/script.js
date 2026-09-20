@@ -22,7 +22,7 @@ function updateDarkMode(e) {
 	// const theme = document.querySelector("meta[name=theme-color]");
 	if (document.body.classList.contains('dark')) {
 		localStorage.setItem('dark', 'true');
-		dark_mode_switch.textContent = "Switch to light mode";
+		dark_mode_switch.textContent = "Light mode";
 		// theme.content = "#000";
 		updateFlashlight(e);
 		['mousemove', 'touchstart', 'touchmove', 'touchend'].forEach(function(s) {
@@ -31,7 +31,7 @@ function updateDarkMode(e) {
 	} else {
 		localStorage.removeItem('dark');
 		localStorage.removeItem('mousePos');
-		dark_mode_switch.textContent = "Switch to dark mode";
+		dark_mode_switch.textContent = "Dark mode";
 		// theme.content = "#FDDB29";
 		['mousemove', 'touchstart', 'touchmove', 'touchend'].forEach(function(s) {
 			document.documentElement.removeEventListener(s, updateFlashlight, false);
@@ -70,7 +70,7 @@ window.addEventListener("load", (event) => {
 		updateDarkMode(mousePos);
 	}
 	else {
-		dark_mode_switch.textContent = "Switch to dark mode";
+		dark_mode_switch.textContent = "Dark mode";
 	}
 });
 
